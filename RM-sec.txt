@@ -1,0 +1,35 @@
+# TEE Keybox Extraction Research: Oppo A15 (CPH2185)
+
+## Abstract
+This repository documents an ongoing research project focused on keybox extraction from the Oppo A15 (MediaTek MT6765 chipset). The methodology relies on static analysis of the Trusted Execution Environment (TEE), specifically targeting the Trustonic Kinibi 410A implementation.
+
+## Methodology & Prerequisites
+
+### Hardware & Environment
+- **Target Device:** Oppo A15 (CPH2185)
+- **SoC:** MediaTek MT6765 (Helio P35)
+- **Status:** Dismantled, ready for low-level communication.
+
+### Toolchain
+- **Interfacing:** `mtkclient` (for partition extraction and memory dumping).
+- **Static Analysis:** `Ghidra` (for disassembly and pattern recognition).
+- **Logic Verification:** `Gemini AI` (for automated code analysis and logic deduction).
+- **Knowledge Base:** Trustonic Kinibi 2013 SDK (leaked source reference).
+
+## Technical Context
+The Oppo A15 utilizes a MediaTek-customized TEE based on Trustonic Kinibi 410A. Key observations:
+* **Partitioning:** `tee1` and `tee2` partitions are accessible via `mtkclient`, providing a comprehensive TEEOS image.
+* **Architecture:** The TEEOS image includes AArch64, Arm32, and Thumb-2 instruction sets (Little Endian).
+* **Exploitation Surface:** * Validated exploit: Kamakiri2.
+    * Memory manipulation: TOCTOU (Time-of-Check to Time-of-Use) for LK patching.
+    * Analysis: Presence of unstripped binaries facilitates string-based heuristic analysis.
+
+## Research Status
+**Current Progress: 30%**
+- [x] Initial device enumeration and partition extraction.
+- [ ] Systematic analysis of TEE unwrap logic.
+- [ ] Identification of cryptographic module entry points.
+- [ ] Keybox verification.
+
+## Disclaimer
+This project is for educational and security research purposes only. The author does not condone unauthorized access to devices or infringement of intellectual property. All analysis is conducted on personal hardware.
