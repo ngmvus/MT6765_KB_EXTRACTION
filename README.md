@@ -57,6 +57,7 @@ The materials:
 	Trustonic Kinibi TEE follows the same model. Therefore, we can pinpoint the Keybox ciphertext location.
  - # RPMB? Again? #
  	RPMB(aka Replay Protected Memory Block) is a specific memory region protected with hardware-based methods, usually for storing sensitive, immutable information. The ability of this region is that it is tamper-proof. The authentication is protected with a hard-coded Authentication Key provisioned from the fabrication stage of the mobile device. It stores the write counter, critical information, and can only be read by the secure elements of the device.
+	
 	An RPMB contains these sections(according to Wikipedia):
 
 		+---------------------------------------------------------------+
@@ -96,6 +97,40 @@ The materials:
 	<img width="597" height="790" alt="image" src="https://github.com/user-attachments/assets/0446dc96-d1cf-4ef5-8b0a-65433ce6bf32" />
 
 	The hypothesis: At this point, we can guess why the trustlet UID was attached to the encrypted blob. Because the normal characteristic of an encrypted blob is extremely high entropy, the magic word **KEYMASTERATTESTDATA** and several bytes next to it is the header, the attached UUID is for usage privileges. As the UID is not matched, TEE won't allow it to read from RPMB. So the next move is to disassemble that suspicious Trustlet Binary(.tlbin).
+  - # Exploration of Trustlet #
+     We defined that 0706000000000000000000000000004d.tlbin is the target file for disassemble, right now, we will disassemble it.
+
+	 A valuable resource we have is the MCLF loader, which map the memory for easier analysis: https://github.com/ghassani/mclf-ida-loader/blob/master/mclf_loader.py
+
+	 This image contain the header of the targeted trustlet:
+	 <img width="1440" height="143" alt="image" src="https://github.com/user-attachments/assets/42b0412d-d333-4e81-89ce-2359e1937310" />
+
+        4D 43 4C 46 05 00 02 00 08 00 00 00 02 00 00 00 03 00 00 00 10 00 00 00 07 06 00 00 00 00 00 00 00 00 00 00 00 00 00 4D 00 00 00 00 01 00 00 00 00 10 00 00 3A E4 01 00 00 10 02 00 98 05 00 00 F8 AA 01 00 21 B7 01 00 00
+
+     This header data is enough for memory map.
+
+	 Extracted memory map from the header:
+	 
+        +---------------------------------------------------------------+
+		| Offset | Bytes        | Data Definition   | Value             |
+		+---------------------------------------------------------------+
+		| 0x0	 | 4D 3C 4C 46  | Magic word		| "MCLF"			|
+		| 0x04	 | 05 00 02 00  | Version(Min/Maj)	| v2.5				|
+		| 0x08   | 08 00 00 00  | Flags				| 0x8				|
+		| 0x0C	 | 02 00 00 00 	| memType			| 2					|
+		| 0x10	 | 03 00 00 00	| serviceType		| 3(Driver/Service) |
+		| 0x14	 | 10 00 00 00	| numInstances		| 16				|
+		| 0x18	 | 07 06 .. 4D	| UUID				| (UUID bytes)		|
+		| 0x28	 | 00 00 00 00 	| driverId			| 0					|
+		| 0x2C	 | 01 00 00 00 	| numThreads		| 1					|
+    	| 0x30	 | 00 10 00 00	| textVA			| 0x00001000		|
+		| 0x34	 | 3A E4 01 00	| textLen			| 0x0001E43A		|
+		| 0x38	 | 00 10 02 00	| dataVA			| 0x00021000		|
+		| 0x3C	 | 98 05 00 00	| dataLen			| 0x00000598		|
+		| 0x40	 | F8 AA 01 00	| bssLen			| 0x0001AAF8		|
+		| 0x44	 | 21 B7 01 00	| entry				| 0x0001B721		|
+		+---------------------------------------------------------------+
+
 
 # Project progress #
  - 30% (unveiling the TEE unwrap logic)
