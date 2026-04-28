@@ -147,7 +147,7 @@ The materials:
 	<img width="1915" height="983" alt="image" src="https://github.com/user-attachments/assets/54557af4-3e1c-4c53-ade2-4fab5d92bd62" />
 	<img width="1904" height="982" alt="image" src="https://github.com/user-attachments/assets/4893bf55-9850-4d7a-8349-62339a9f836c" />
 
-	It is evident that the trustlet binary wasn't treated well before going to production. From the string view, we can assume that this trustlet definitely carries the provision process(factory) and parses the attestation data.
+	It is evident that the trustlet binary wasn't treated well before going to production, leaving it unstripped. From the string view, we can assume that this trustlet definitely carries the provision process(factory) and parses the attestation data.
 
 # Project progress #
  - 30% (unveiling the TEE unwrap logic)
