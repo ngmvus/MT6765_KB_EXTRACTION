@@ -26,35 +26,36 @@ The materials:
 	+ Unstripped TEEOS image (contains plenty of readable strings).
 	+ Identical function pointer table
 
-# The Action #
+# Definitions #
+	# Keybox? What is it? #
 
-The Keybox is a part of Android's Root of Trust, which proves the overall integrity of your device. This schematic illustrates the keybox usage activity:
+	The Keybox is a part of Android's Root of Trust, which proves the overall integrity of your device. This schematic illustrates the keybox usage activity:
 
-       NORMAL WORLD (REE)                SECURE MONITOR (EL3)               SECURE WORLD (TEE)
-    +-----------------------+          +-----------------------+          +-----------------------+
-    |   Application Layer   |          |                       |          |  Trusted Application  |
-    |    (Keystore API)     |          |   State Preservation  |          |   (Keymaster/Signer)  |
-    +-----------+-----------+          |  (Exception Handling) |          +-----------+-----------+
-                |                      |                       |                      ^
-      (1) Request Attestation          +-----------+-----------+              (4) Dispatch Command
-                |                                  |                                  |
-                v                                  v                                  v
-    +-----------------------+          +-----------------------+          +-----------------------+
-    |      Keystore HAL     |   (2)    |    Security Gateway   |   (3)    |     TEE Kernel/OS     |
-    |   (Command Packing)   |--------->|      (SMC Entry)      |--------->|  (System Call Layer)  |
-    +-----------------------+   SMC    +-----------------------+          +-----------+-----------+
-                                                                                      |
-                                                                            (5) Fetch & Unwrap
-                                                                                      |
-    +---------------------------------------------------------------------------------v-------------------+
-    |                                     HARDWARE LAYER                                                  |
-    |   +-----------------------+          +-----------------------+          +-----------------------+   |
-    |   |    Secure Storage     |          |    Cryptographic Accel|          |   Root of Trust (RoT) |   |
-    |   |   (RPMB/Flash Part)   |          |     (RSA/AES/ECC)     |          |      (Efuse/HUK)      |   |
-    |   +-----------------------+          +-----------------------+          +-----------------------+   |
-    +-----------------------------------------------------------------------------------------------------+
+           NORMAL WORLD (REE)                SECURE MONITOR (EL3)               SECURE WORLD (TEE)
+        +-----------------------+          +-----------------------+          +-----------------------+
+        |   Application Layer   |          |                       |          |  Trusted Application  |
+        |    (Keystore API)     |          |   State Preservation  |          |   (Keymaster/Signer)  |
+        +-----------+-----------+          |  (Exception Handling) |          +-----------+-----------+
+                    |                      |                       |                      ^
+          (1) Request Attestation          +-----------+-----------+              (4) Dispatch Command
+                    |                                  |                                  |
+                    v                                  v                                  v
+        +-----------------------+          +-----------------------+          +-----------------------+
+        |      Keystore HAL     |   (2)    |    Security Gateway   |   (3)    |     TEE Kernel/OS     |
+        |   (Command Packing)   |--------->|      (SMC Entry)      |--------->|  (System Call Layer)  |
+   	    +-----------------------+   SMC    +-----------------------+          +-----------+-----------+
+     	                                                                                  |
+     		                                                                       (5) Fetch & Unwrap
+    	                                                                                  |
+    	+---------------------------------------------------------------------------------v-------------------+
+    	|                                     HARDWARE LAYER                                                  |
+    	|   +-----------------------+          +-----------------------+          +-----------------------+   |
+    	|   |    Secure Storage     |          |    Cryptographic Accel|          |   Root of Trust (RoT) |   |
+    	|   |   (RPMB/Flash Part)   |          |     (RSA/AES/ECC)     |          |      (Efuse/HUK)      |   |
+    	|   +-----------------------+          +-----------------------+          +-----------------------+   |
+    	+-----------------------------------------------------------------------------------------------------+
 
-Trustonic Kinibi TEE follows the same model. Therefore, we can pinpoint the Keybox ciphertext location.
+	Trustonic Kinibi TEE follows the same model. Therefore, we can pinpoint the Keybox ciphertext location.
 
 
 
