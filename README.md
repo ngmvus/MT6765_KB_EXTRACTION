@@ -57,14 +57,31 @@ The materials:
 	Trustonic Kinibi TEE follows the same model. Therefore, we can pinpoint the Keybox ciphertext location.
  - # RPMB? Again? #
  	RPMB(aka Replay Protected Memory Block) is a specific memory region protected with hardware-based methods, usually for storing sensitive, immutable information. The ability of this region is that it is tamper-proof. The authentication is protected with a hard-coded Authentication Key provisioned from the fabrication stage of the mobile device. It stores the write counter, critical information, and can only be read by the secure elements of the device.
-	An RPMB contains these sections:
+	An RPMB contains these sections(according to Wikipedia):
 
 		+---------------------------------------------------------------+
 		| Section            | Size                                     |
 		+---------------------------------------------------------------+
 		| Authentication Key | 32 bytes Write-only                      |
 		| Write Counter      | 4 bytes (32 bits) Read-only              |
-		| Data               | 128Kb to 16Mb Rwad-Write                 |
+		| Data               | 128Kb to 16Mb Read-Write                 |
 		+---------------------------------------------------------------+
+# The action #
+ - # Locating the attestation data cipher text #
+	As we mentioned, the target ciphertext may be stored in a secure place like RPMB.
+	
+	The collected raw RPMB dump from my device:
+	<img width="613" height="43" alt="image" src="https://github.com/user-attachments/assets/b324ec9c-fa24-40ad-9d3b-ed5320b0da90" />
+
+	The hexadecimal data in RPMB:
+	<img width="1919" height="787" alt="image" src="https://github.com/user-attachments/assets/6c34c072-ac70-4299-8df2-c3bbc90155eb" />
+
+	As we have seen, the data begins at 0x8000 with high entropy data behind it. As we don't know what it is, we should skim it further.
+
+	Gotcha!
+	<img width="1919" height="184" alt="image" src="https://github.com/user-attachments/assets/3ecac2e6-a268-4491-a54a-2febebc0ec72" />
+
+
+	
 # Project progress #
  - 30% (unveiling the TEE unwrap logic)
