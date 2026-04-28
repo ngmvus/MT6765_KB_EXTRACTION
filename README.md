@@ -131,6 +131,15 @@ The materials:
 		| 0x44	 | 21 B7 01 00	| entry				| 0x0001B721		|
 		+---------------------------------------------------------------+
 
+	 Now we can push it into Ghidra:
+
+		+---------------------------------------------------------------------------------------------+
+		| Segment | Start Address | Length  | File Offset | End Address | Type          | Permissions |
+		+---------------------------------------------------------------------------------------------+
+		| .text	  | 0x00001000	  | 0x1E43A | 0x0         | 0x1F43A     | Initialized   | R-X		  |
+		| .data	  | 0x00021000	  | 0x598	| 0x1E43A     |	0x21598		| Initialized   | RW-	   	  |
+		| .bss	  | 0x21598       |	0x1AAF8	| N/A         |	0x3C090     | Uninitialized	| RW-	 	  |
+		+---------------------------------------------------------------------------------------------+
 
 # Project progress #
  - 30% (unveiling the TEE unwrap logic)
