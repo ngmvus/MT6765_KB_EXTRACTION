@@ -16,7 +16,7 @@ The materials:
 - About the Oppo A15, it is known that the device is based on MT6765(aka Helio P35), which is such a favourable environment for me to start an analysis on it.
 - Known information:
 	+ TEE is supplied and customized by Mediatek, based on Trustonic Kinibi 410A.
-    + The labeled partitions known as tee1 and tee2 are extractable through mtkclient, and they contain a FULL image of TEEOS..
+    + The labeled partitions known as tee1 and tee2 are extractable through mtkclient, and they contain a FULL image of TEEOS.
 	+ MCLF headers of TEE executables are identical and widely known.
 	+ The dumped TEEOS image is packed with 3 instructions: AArch64, Arm32, Thumb-2 (Little endian).
 	+ Leaked Kinibi SDK from qcom-leaked-source, which contains the 2013 Trustonic Kinibi SDK.
@@ -27,8 +27,7 @@ The materials:
 	+ Identical function pointer table
 
 # Definitions #
-	# Keybox? What is it? #
-
+ - # Keybox? What is it? #
 	The Keybox is a part of Android's Root of Trust, which proves the overall integrity of your device. This schematic illustrates the keybox usage activity:
 
            NORMAL WORLD (REE)                SECURE MONITOR (EL3)               SECURE WORLD (TEE)
@@ -56,8 +55,16 @@ The materials:
     	+-----------------------------------------------------------------------------------------------------+
 
 	Trustonic Kinibi TEE follows the same model. Therefore, we can pinpoint the Keybox ciphertext location.
+ - # RPMB? Again? #
+ 	RPMB(aka Replay Protected Memory Block) is a specific memory region protected with hardware-based methods, usually for storing sensitive, immutable information. The ability of this region is that it is tamper-proof. The authentication is protected with a hard-coded Authentication Key provisioned from the fabrication stage of the mobile device. It stores the write counter, critical information, and can only be read by the secure elements of the device.
+	An RPMB contains these sections:
 
-
-
+		+---------------------------------------------------------------+
+		| Section            | Size                                     |
+		+---------------------------------------------------------------+
+		| Authentication Key | 32 bytes Write-only                      |
+		| Write Counter      | 4 bytes (32 bits) Read-only              |
+		| Data               | 128Kb to 16Mb Rwad-Write                 |
+		+---------------------------------------------------------------+
 # Project progress #
  - 30% (unveiling the TEE unwrap logic)
