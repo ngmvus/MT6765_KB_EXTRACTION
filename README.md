@@ -53,5 +53,10 @@ The Keybox is a part of Android's Root of Trust, which proves the overall integr
     |   |   (RPMB/Flash Part)   |          |     (RSA/AES/ECC)     |          |      (Efuse/HUK)      |   |
     |   +-----------------------+          +-----------------------+          +-----------------------+   |
     +-----------------------------------------------------------------------------------------------------+
+
+Trustonic Kinibi TEE follows the same model. Therefore, we can pinpoint the Keybox ciphertext location.
+
+
+
 # Project progress #
  - 30% (unveiling the TEE unwrap logic)
