@@ -68,7 +68,7 @@ The materials:
 		+---------------------------------------------------------------+
  - #  #
 # The action #
- - # Locating the attestation data cipher text #
+ - # Locating the attestation data ciphertext #
 	As we mentioned, the target ciphertext may be stored in a secure place like RPMB.
 	
 	The collected raw RPMB dump from my device:
@@ -95,7 +95,7 @@ The materials:
 	Some Trusted binaries:
 	<img width="597" height="790" alt="image" src="https://github.com/user-attachments/assets/0446dc96-d1cf-4ef5-8b0a-65433ce6bf32" />
 
-	The hypothesis: At this point, we can guess why the trustlet UID was attached to the encrypted blob. Because the normal characteristic of an encrypted blob is extremely high entropy, the magic word **KEYMASTERATTESTDATA** and several bytes next to it is the header, the attached UUID is for usage privileges. As the UID is not matched, TEE won't allow it to read from RPMB. So the next move is disassemble the Trustlet Binary(.tlbin)
+	The hypothesis: At this point, we can guess why the trustlet UID was attached to the encrypted blob. Because the normal characteristic of an encrypted blob is extremely high entropy, the magic word **KEYMASTERATTESTDATA** and several bytes next to it is the header, the attached UUID is for usage privileges. As the UID is not matched, TEE won't allow it to read from RPMB. So the next move is to disassemble that suspicious Trustlet Binary(.tlbin).
 
 # Project progress #
  - 30% (unveiling the TEE unwrap logic)
