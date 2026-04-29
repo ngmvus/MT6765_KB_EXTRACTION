@@ -150,4 +150,4 @@ The materials:
 	It is evident that the trustlet binary wasn't treated well before going to production, leaving it unstripped. From the string view, we can assume that this trustlet definitely carries the provision process(factory) and parses the attestation data.
 
 # Project progress #
- - 30% (unveiling the TEE unwrap logic)
+ - 40% (mapping function pointers).
