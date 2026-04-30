@@ -169,4 +169,4 @@ The materials:
 	
 
 # Project progress #
- - 40% (mapping function pointers).
+ - 40% (mapping function pointer/ im abt to die).
