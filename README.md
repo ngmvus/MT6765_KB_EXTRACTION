@@ -67,7 +67,24 @@ The materials:
 		| Write Counter      | 4 bytes (32 bits) Read-only              |
 		| Data               | 128Kb to 16Mb Read-Write                 |
 		+---------------------------------------------------------------+
- - #  #
+ - # About Trustonic <t-base security platform # 
+ 	T-Base is a commercially deployed, security-critical Trusted Operating System (TOS) platform developed by Trustonic. It is engineered to operate within a Trusted Execution Environment (TEE), creating a hardened, secure partition on a system-on-chip (SoC) based on ARM TrustZone technology.
+
+	Fundamentally, T-Base acts as the "Secure World" operating system. It provides an isolated computational environment that remains impervious to threats targeting the primary Rich Execution Environment (REE), such as Android or Linux. Even if the primary kernel is compromised (e.g., via root exploitation), the sensitive processes and cryptographic keys managed by T-Base remain protected due to the hardware-level isolation enforced by the processor.
+
+	Key Components of the T-Base Platform
+    + The T-Base architecture is modular and layered, comprising several distinct elements that ensure system-wide security:
+   
+	+ Kinibi Microkernel: The foundational core of the T-Base platform. It is a minimalist kernel responsible for essential system functions, including process scheduling, inter-process communication (IPC) management, and secure memory allocation. Its reduced codebase minimizes the attack surface.
+	
+	+ Trusted Applications (Trustlets): These are discrete, signed binary modules that execute within the TEE. Each Trustlet performs specific security tasks, such as managing biometric templates, handling mobile payment tokens, or processing Digital Rights Management (DRM) content. They operate in a sandbox, unable to interfere with one another.
+	
+	+ Secure Drivers: These software components interface directly with hardware peripherals while they are in a "secure state." Examples include drivers for secure input/output (like fingerprint sensors or secure touchscreens) and cryptoprocessors.
+
+	+ Secure Monitor Call (SMC) Interface: This is the strictly regulated communication bridge between the Normal World (Android) and the Secure World (T-Base). All requests from the Android OS to the TEE must pass through this interface, which enforces authentication and input validation to prevent unauthorized commands.
+
+ 	+ Cryptographic Services: T-Base includes a suite of robust cryptographic primitives (e.g., AES, RSA, ECC) implemented in the secure domain. These allow for the generation, storage, and usage of private keys that never leave the TEE hardware, ensuring the integrity of device attestation.
+
 # The action #
  - # Locating the attestation data ciphertext #
 	As we mentioned, the target ciphertext may be stored in a secure place like RPMB.
@@ -83,9 +100,9 @@ The materials:
 	Gotcha!
 	<img width="1919" height="184" alt="image" src="https://github.com/user-attachments/assets/3ecac2e6-a268-4491-a54a-2febebc0ec72" />
 
-	We predicted that the keybox ciphertext should be here. How to decrypt it into private keys? It is not easy. Despite of buggy SoC, the wrapping algorithm is not.
+	We predicted that the keybox ciphertext should be here. How to decrypt it into private keys? It is not easy. Despite the buggy SoC, the wrapping algorithm is not.
 
-	Digging further, a suspicious data has appeared:
+	Digging further, suspicious data has appeared:
 
        07 06 00 00 00 00 00 00 00 00 00 00 00 00 00 4D
 
@@ -148,6 +165,8 @@ The materials:
 	<img width="1904" height="982" alt="image" src="https://github.com/user-attachments/assets/4893bf55-9850-4d7a-8349-62339a9f836c" />
 
 	It is evident that the trustlet binary wasn't treated well before going to production, leaving it unstripped. From the string view, we can assume that this trustlet definitely carries the provision process(factory) and parses the attestation data.
+
+	
 
 # Project progress #
  - 40% (mapping function pointers).
