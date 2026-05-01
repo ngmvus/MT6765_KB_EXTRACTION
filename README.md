@@ -170,5 +170,7 @@ The materials:
 
 	Based on the string view, the trustlet can be identified as teeKeyMaster4
 
+	
+
 # Project progress #
- - 40% (mapping function pointer/ im abt to die).
+ - 45% (analyzing crypto accelerator registers/mapping syscalls).
