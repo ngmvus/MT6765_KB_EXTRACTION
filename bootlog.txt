@@ -1,0 +1,339 @@
+[    4.669389] (0)[532:mcDriverDaemon]Trustonic TEE: admin_open: daemon connection open, TGID 532
+[    4.679228] (3)[282:rpmb_open]Trustonic TEE: ERROR -1 mcp_cmd: open session: res 32
+[    4.679234] (2)[229:tee_log]Trustonic TEE: 201(1)|Mounting partition 1...
+[    4.679241] (2)[229:tee_log]Trustonic TEE: 201(1)|[STH2] ERROR static_fileServerMountFileSystem : failed to mount partition 1
+[    4.680846] (1)[229:tee_log]Trustonic TEE: 401(2)|TA SPT2 : Starting.
+[    4.680867] (1)[229:tee_log]Trustonic TEE: 401(2)|TA SPT2 : tbase info.
+[    4.680873] (1)[229:tee_log]Trustonic TEE: 401(2)|tlApi version    =  0x00010014
+[    4.680879] (1)[229:tee_log]Trustonic TEE: 401(2)|productId        = t-base-MTK-A64-Android-410a-V107-20190917_223909_73476_99814
+[    4.680885] (1)[229:tee_log]Trustonic TEE: 401(2)|versionMci       = 0x00010007
+[    4.680891] (1)[229:tee_log]Trustonic TEE: 401(2)|versionSo        = 0x00020002
+[    4.680896] (1)[229:tee_log]Trustonic TEE: 401(2)|versionMclf      = 0x00020005
+[    4.680902] (1)[229:tee_log]Trustonic TEE: 401(2)|versionContainer = 0x00020001
+[    4.680908] (1)[229:tee_log]Trustonic TEE: 401(2)|versionMcConfig  = 0x00000003
+[    4.680913] (1)[229:tee_log]Trustonic TEE: 401(2)|versionTlApi     = 0x00010014
+[    4.680919] (1)[229:tee_log]Trustonic TEE: 401(2)|versionDrApi     = 0x00010004
+[    4.680925] (1)[229:tee_log]Trustonic TEE: 401(2)|versionCmp       = 0x00000000
+[    4.686841] (5)[532:mcDriverDaemon]Trustonic TEE: ERROR -1 mcp_cmd: open session: res 8
+[    4.692187] (2)[229:tee_log]Trustonic TEE: 201(0)|Mounting partition 1...
+[    4.694477] (2)[229:tee_log]Trustonic TEE: 201(1)|Partition 1 successfully mounted
+[    4.701387] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-0 = 0x10100000
+[    4.701410] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-1 = 0x1043000
+[    4.701417] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-2 = 0x40000000
+[    4.701424] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-3 = 0x1
+[    4.701430] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-4 = 0x0
+[    4.701437] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-5 = 0xf00bf0
+[    4.701443] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-6 = 0x0
+[    4.701450] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-7 = 0x300000
+[    4.701457] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-8 = 0x80000
+[    4.701464] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-9 = 0x0
+[    4.701470] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-10 = 0x0
+[    4.701478] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-11 = 0x0
+[    4.701484] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-12 = 0x0
+[    4.701491] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-0 = 0x30ffc3c3
+[    4.701498] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-1 = 0xfffc0fcf
+[    4.701505] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-2 = 0xfc0fffff
+[    4.701511] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-3 = 0xfc33ffff
+[    4.701518] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-4 = 0x3fffffff
+[    4.701524] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-5 = 0xfffffff0
+[    4.701531] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-6 = 0xffcffffc
+[    4.701538] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-7 = 0xffc3ffff
+[    4.701545] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-8 = 0xfffbff3f
+[    4.701552] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-9 = 0x3cfc
+[    4.701559] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-10 = 0x0
+[    4.701566] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-11 = 0x0
+[    4.702397] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg1-12 = 0x0
+[    4.702418] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg0-0 = 0x0
+[    4.702426] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg0-1 = 0x0
+[    4.702432] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg0-2 = 0x0
+[    4.702439] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg0-3 = 0x0
+[    4.702445] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg0-4 = 0x0
+[    4.702452] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg0-5 = 0x0
+[    4.702459] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg0-6 = 0x0
+[    4.702466] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg0-7 = 0x0
+[    4.702472] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg0-8 = 0x0
+[    4.702478] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg1-0 = 0x0
+[    4.702485] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg1-1 = 0x0
+[    4.702491] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg1-2 = 0x0
+[    4.702498] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg1-3 = 0x0
+[    4.702504] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg1-4 = 0x0
+[    4.702510] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg1-5 = 0x0
+[    4.702517] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg1-6 = 0x0
+[    4.702523] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg1-7 = 0x0
+[    4.702530] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg1-8 = 0x0
+[    4.702536] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg2-0 = 0x0
+[    4.702542] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg2-1 = 0x0
+[    4.704886] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg2-2 = 0x0
+[    4.704908] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg2-3 = 0x0
+[    4.704915] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg2-4 = 0x0
+[    4.704922] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg2-5 = 0x0
+[    4.704929] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg2-6 = 0x0
+[    4.704935] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg2-7 = 0x0
+[    4.704942] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg2-8 = 0x0
+[    4.704949] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg3-0 = 0xffffffff
+[    4.704955] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg3-1 = 0xffffffff
+[    4.704962] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg3-2 = 0xffffffff
+[    4.704969] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg3-3 = 0xffffffff
+[    4.704976] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg3-4 = 0xffffffff
+[    4.704982] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg3-5 = 0xfff
+[    4.704989] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg3-6 = 0x0
+[    4.704996] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg3-7 = 0x0
+[    4.705003] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MM)reg3-8 = 0x0
+[    4.705010] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MD)reg0-0 = 0xfffff800
+[    4.705016] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MD)reg0-1 = 0xffffffff
+[    4.705023] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MD)reg0-2 = 0x0
+[    4.705030] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MD)reg1-0 = 0x0
+[    4.705037] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MD)reg1-1 = 0x0
+[    4.705043] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MD)reg1-2 = 0x0
+[    4.705050] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MD)reg2-0 = 0x0
+[    4.705056] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MD)reg2-1 = 0x0
+[    4.705063] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MD)reg2-2 = 0x0
+[    4.705070] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MD)reg3-0 = 0xffffffff
+[    4.705077] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MD)reg3-1 = 0xffffffff
+[    4.705084] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (MD)reg3-2 = 0x0
+[    4.705090] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)MAS_SEC_0 = 0x200400
+[    4.705095] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] <6><7><6><5>
+[    4.706799] (3)[229:tee_log]Trustonic TEE: 701(1)|[<t Driver Drspi] 1.0, Build Feb 22 2024, 01:00:22
+[    4.741325] (2)[229:tee_log]Trustonic TEE: a01(3)|teeKeyMaster4-package-4.0.2-20190104_130719_3818_90370
+[    4.741338] (2)[229:tee_log]Trustonic TEE: a01(3)|tlTeeKeymaster: Keymaster TA version 0400.0000
+[    4.741344] (2)[229:tee_log]Trustonic TEE: a01(3)|tlTeeKeymaster: Limiting API version to 4
+[    4.741350] (2)[229:tee_log]Trustonic TEE: a01(3)|tlTeeKeymaster: Neon instructions will be used
+[    4.744525] (2)[229:tee_log]Trustonic TEE: b01(3)|t-base-MTK-ARMv8-Android-400C-V001-20180713_214233_52230_81596
+[    4.744546] (2)[229:tee_log]Trustonic TEE: b01(3)|[DrAndroid] Version 1.0
+[    4.745043] (2)[229:tee_log]Trustonic TEE: a01(3)|[verifiedBoot_GetBootPatchlevel] verifiedBoot_GetBootPatchlevel boot_patchlevel = 135c145
+[    8.352682] (3)[229:tee_log]Trustonic TEE: c01(4)|t-base-MTK-ARMv8-Android-400C-V001-20180713_214233_52230_81596
+[    8.352708] (3)[229:tee_log]Trustonic TEE: c01(4)|tlTeeGatekeeper: GateKeeper TA version 0100.258
+[    9.735872] (1)[229:tee_log]Trustonic TEE: 104(4)|MSH ASLR c01, UUID=09080000-0000-0000-0000-000000000000, code offset 0x00000000, mclib offset 0x07f62000
+[    9.759932] (0)[229:tee_log]Trustonic TEE: c01(4)|[crypto_eng] tlMain(): main... May 20 202110:28:30
+[    9.931593] (5)[229:tee_log]Trustonic TEE: c01(5)|Wait for notification.
+[    9.931608] (5)[229:tee_log]Trustonic TEE: c01(5)|[<t Trusted Application Fingerprint Cards], Build Aug 20 2020, 11:21:39
+[    9.931614] (5)[229:tee_log]Trustonic TEE: c01(5)|tlApi version 0x00010014
+[    9.931618] (5)[229:tee_log]Trustonic TEE: c01(5)|productId        = t-base-MTK-A64-Android-410a-V107-20190917_223909_73476_99814
+[    9.931623] (5)[229:tee_log]Trustonic TEE: c01(5)|versionMci       = 0x00010007
+[    9.931628] (5)[229:tee_log]Trustonic TEE: c01(5)|versionSo        = 0x00020002
+[    9.931632] (5)[229:tee_log]Trustonic TEE: c01(5)|versionMclf      = 0x00020005
+[    9.931637] (5)[229:tee_log]Trustonic TEE: c01(5)|versionContainer = 0x00020001
+[    9.931641] (5)[229:tee_log]Trustonic TEE: c01(5)|versionMcConfig  = 0x00000003
+[    9.931645] (5)[229:tee_log]Trustonic TEE: c01(5)|versionTlApi     = 0x00010014
+[    9.931650] (5)[229:tee_log]Trustonic TEE: c01(5)|versionDrApi     = 0x00010004
+[    9.931654] (5)[229:tee_log]Trustonic TEE: c01(5)|versionCmp       = 0x00000000
+[    9.931660] (5)[229:tee_log]Trustonic TEE: c01(5)|setup_cmd: face TA v1.8 (verify support to 30077), 2018-11-05
+[    9.933210] (5)[229:tee_log]Trustonic TEE: c01(5)|Wait for notification.
+[    9.944941] (4)[229:tee_log]Trustonic TEE: c01(4)|Wait for notification.
+[   10.787432] (0)[229:tee_log]Trustonic TEE: 201(7)|Mounting partition 0...
+[   10.795717] (4)[229:tee_log]Trustonic TEE: 201(4)|Partition 0 successfully mounted
+[   10.862854] (4)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > TEST_CMD(0x59)
+[   10.863104] (4)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_test_cmd:991] Unsupported test cmd: 4099.  Test not yet implemented or commnented out.
+[   10.863113] (4)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x59 (-1015)
+[   10.864160] (5)[229:tee_log]Trustonic TEE: d01(6)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > SET_SPI_DEV(0x20)
+[   10.864173] (5)[229:tee_log]Trustonic TEE: d01(6)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x20 (0)
+[   10.865854] (4)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > INIT(0x0e)
+[   10.865868] (4)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][FP_IMP][DBG][_fp_impl_init:725] sileadta impl, Aug-17-2020_16:36:39 tag: 299dc01
+[   10.865873] (4)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][FP_IMP][INFO][_fp_impl_init:735] yogust-0718
+[   10.865880] (4)[229:tee_log]Trustonic TEE: 602(1)|[SEC DRV] T[DEVAPC] (log:1, type:0x10000000) (Infra)MAS_SEC_0 = 0x200402
+[   10.865889] (4)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][fp_spi][DBG][fp_spi_read_chipid:833] ChipID=0x6250a100, SubChipID=0x6250a100, virtualid=0x00000000
+[   10.865895] (4)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][fp_spi][DBG][fp_spi_read_chipid:847] Load config, ver=163
+[   10.865900] (4)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][FP_IMP][INFO][_fp_impl_init:763] ta ver: v353-0-0
+[   10.865907] (4)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x0e (0)
+[   10.867371] (5)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > TEST_CMD(0x59)
+[   10.867387] (5)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_test_cmd:991] Unsupported test cmd: 4100.  Test not yet implemented or commnented out.
+[   10.867394] (5)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x59 (-1015)
+[   10.868279] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > INIT2(0x1b)
+[   10.868298] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-algo] alg version : 151388416,9,6,1,0
+[   10.868303] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-algo] silead algorithm version R9G01---2019061911
+[   10.868307] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-algo] silead version 2020090710
+[   10.868628] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-algo] alg_select 3,enrolNum 16,max_templates 54,max_templates_size 270000,identify_far_threshold 17,update_far_threshold 23,g_samearea_verify_threshold 17
+[   10.868639] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-algo] enroll_quality_threshold 42,enroll_coverage_threshold 75,quality_threshold 42,coverage_threshold 75,skin_threshold 3220,artificial_threshold 2414
+[   10.868645] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-algo] g_samearea_dist 43,g_check_samearea_start 5,g_check_samearea_OnOff 3,g_samearea_check_once_num 1,g_samearea_check_num_total 6
+[   10.868648] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-algo] g_dy_fast 4, g_segment 0
+[   10.868654] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-algo] g_water_finger_detect 0,g_shake_coe 10,g_noise_coe 140,g_gray_prec 25,g_water_detect_threshold 1500
+[   10.868659] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-algo] silead getIalgorithm ok!g_algi_num 3,g_dy_fast 4,g_segment 0
+[   10.868663] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-algo] silead alg version 20052211!!!
+[   10.868969] (5)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][silead_algo][INFO][silfp_algo_init:280] Algorithm version: v20052211[fp-algo] silead alg version 20052211!!!
+[   10.869640] (5)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_download_cfg_internal:340] download normal
+[   10.877058] (0)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][FP_IMP_CAL][DBG][fp_impl_cal_read_sn:1190] SN(O): 0xa8749962b3
+[   10.877071] (0)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x1b (0)
+[   10.877963] (7)[229:tee_log]Trustonic TEE: d01(4)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > GET_VERSIONS(0x50)
+[   10.877973] (7)[229:tee_log]Trustonic TEE: d01(4)|[fp-algo] silead alg version 20052211!!!
+[   10.877980] (7)[229:tee_log]Trustonic TEE: d01(4)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x50 (0)
+[   10.879024] (7)[229:tee_log]Trustonic TEE: d01(4)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > GET_OTP(0x39)
+[   10.881400] (7)[229:tee_log]Trustonic TEE: d01(4)|[fp-gp][FP_IMP_CAL][DBG][_fp_impl_otp_parse:1283] OTP: 0x5a8c0017749962b3
+[   10.881417] (7)[229:tee_log]Trustonic TEE: d01(4)|[fp-gp][FP_IMP_CAL][ERR][_fp_impl_otp_parse:1289] VID:TRULY(5), v6, 2020-4-12
+[   10.881423] (7)[229:tee_log]Trustonic TEE: d01(4)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x39 (4)
+[   10.883746] (5)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > NAV_SUPPORT(0x0d)
+[   10.883758] (5)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x0d (0)
+[   11.536901] (4)[229:tee_log]Trustonic TEE: d01(3)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > MODE_DOWNLOAD(0x01)
+[   11.536913] (4)[229:tee_log]Trustonic TEE: d01(3)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_download_cfg_internal:340] download normal
+[   11.540267] (5)[229:tee_log]Trustonic TEE: d01(3)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_download_mode_internal:547] charging state 0.
+[   11.540279] (5)[229:tee_log]Trustonic TEE: d01(3)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x01 (0)
+[   11.542493] (5)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > CHECK_BROKEN(0x60)
+[   11.542504] (5)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_download_cfg_internal:340] download full
+[   11.542510] (5)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_download_cfg_internal:340] download fg_detect
+[   11.549275] (7)[229:tee_log]Trustonic TEE: 702(0)|SpiEnableDma szl, TX [64000]
+[   11.556806] (7)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][silead_algo][DBG][silfp_algo_test_finger_status:1206] ret 0, result 0, threshold 100, w 64, h 80
+[   11.556819] (7)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][FP_IMP][DBG][_fp_impl_test_check_finger_status:1421] no finger.
+[   11.556825] (7)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_download_cfg_internal:340] download nav_hg_ds
+[   11.562470] (5)[229:tee_log]Trustonic TEE: 702(0)|SpiEnableDma szl, TX [64000]
+[   11.570479] (5)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_download_cfg_internal:340] download full
+[   11.574427] (5)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_download_cfg_internal:340] download fg_detect
+[   11.578443] (5)[229:tee_log]Trustonic TEE: 702(0)|SpiEnableDma szl, TX [64000]
+[   11.586266] (0)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][silead_algo][DBG][silfp_algo_test_finger_status:1206] ret 0, result 0, threshold 100, w 64, h 80
+[   11.586278] (0)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][FP_IMP][DBG][_fp_impl_test_check_finger_status:1421] no finger.
+[   11.586284] (0)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][FP_IMP][DBG][_fp_impl_check_broken:1502] no finger and deadpx: 0
+[   11.586289] (0)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x60 (0)
+[   11.596703] (1)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > MODE_DOWNLOAD(0x01)
+[   11.596715] (1)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_download_cfg_internal:340] download normal
+[   11.602460] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_download_mode_internal:547] charging state 0.
+[   11.602473] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x01 (0)
+[   11.609806] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > MODE_DOWNLOAD(0x01)
+[   11.609818] (6)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_download_cfg_internal:340] download esd
+[   11.611549] (1)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][FP_IMP_INTERNAL][DBG][fp_impl_download_mode_internal:547] charging state 0.
+[   11.611561] (1)[229:tee_log]Trustonic TEE: d01(7)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x01 (0)
+[   15.478466] (4)[229:tee_log]Trustonic TEE: 104(7)|MSH ASLR e01, UUID=09080000-0000-0000-0000-000000000000, code offset 0x00000000, mclib offset 0x07fa4000
+[   15.483696] (4)[229:tee_log]Trustonic TEE: e01(1)|[crypto_eng] tlMain(): main... May 20 202110:28:30
+[   21.994027] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] face_get_auth_id
+[   21.994038] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file enter
+[   21.994044] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file, new_path is /data/vendor_de/0/facedata/authenticatorId
+[   21.994048] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   21.994052] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   21.994055] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   21.994060] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   21.994065] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file, 0 0
+[   21.994069] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file filename:/data/vendor_de/0/facedata/authenticatorId
+[   21.994074] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   21.994079] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] face_get_auth_id read autheticator_id error or file empty, status = 0
+[   21.994083] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file enter
+[   21.994088] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file, new_path is /data/vendor_de/0/facedata/authenticatorId.bak
+[   21.994092] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   21.994096] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   21.994100] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   21.994104] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   21.994108] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file, 0 0
+[   21.994113] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file filename:/data/vendor_de/0/facedata/authenticatorId.bak
+[   21.994117] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   21.994121] (5)[229:tee_log]Trustonic TEE: c01(4)|Wait for notification.
+[   21.994405] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] face_ta_bio_command_handler, request    valid_size = 4
+[   21.994415] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] face_ta_bio_command_handler, request  request_size = 4
+[   21.994420] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] face_ta_bio_command_handler, request response_size = 0
+[   21.996328] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] face_ta_bio_command_handler, st_common_process_command begin. 0x00102018,
+[   21.996340] (5)[229:tee_log]Trustonic TEE: c01(4)|STFACEUNLOCK line:(747): version:3.3.22.657-pro-18fc92b
+[   21.996345] (5)[229:tee_log]Trustonic TEE: c01(4)|STFACEUNLOCK line:(756): cmd = 4
+[   21.996349] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file enter
+[   21.996354] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file, new_path is /data/vendor_de/0/facedata/callbackinfo
+[   21.996358] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   21.996363] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   21.996366] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   21.996370] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   21.996375] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file, 0 0
+[   21.996380] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file filename:/data/vendor_de/0/facedata/callbackinfo
+[   21.996384] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   21.996390] (5)[229:tee_log]Trustonic TEE: c01(4)|STFACEUNLOCK line:(1059): template file not exit, do not need update file version
+[   21.996395] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] face_ta_bio_command_handler, st_common_process_command end.
+[   21.996399] (5)[229:tee_log]Trustonic TEE: c01(4)|Wait for notification.
+[   22.002411] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] face_ta_bio_command_handler, request    valid_size = 4
+[   22.002423] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] face_ta_bio_command_handler, request  request_size = 4
+[   22.002428] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] face_ta_bio_command_handler, request response_size = 4
+[   22.002434] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] face_ta_bio_command_handler, st_common_process_command begin. 0x00102018,
+[   22.002440] (5)[229:tee_log]Trustonic TEE: c01(4)|STFACEUNLOCK line:(756): cmd = 0
+[   22.002443] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file enter
+[   22.002448] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file, new_path is /data/vendor_de/0/facedata/callbackinfo
+[   22.002452] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   22.002456] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   22.002460] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   22.002464] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   22.002468] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file, 0 0
+[   22.002473] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_read_from_file filename:/data/vendor_de/0/facedata/callbackinfo
+[   22.003543] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   22.003550] (5)[229:tee_log]Trustonic TEE: c01(4)|STFACEUNLOCK line:(606): [callbackinfo] not exist
+[   22.003555] (5)[229:tee_log]Trustonic TEE: c01(4)|STFACEUNLOCK line:(770): read file failed:ret:203
+[   22.003560] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [st_remove_file] : entry!
+[   22.003563] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [remove_template] : entry!
+[   22.003567] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [remove_template] : exit!
+[   22.003571] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_remove_file, 0
+[   22.003596] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   22.003600] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   22.003604] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [st_remove_file] : exit!
+[   22.003608] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [st_remove_file] : entry!
+[   22.003612] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [remove_template] : entry!
+[   22.003615] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [remove_template] : exit!
+[   22.003620] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_remove_file, 0
+[   22.003623] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   22.003627] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   22.003631] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [st_remove_file] : exit!
+[   22.003635] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [st_remove_file] : entry!
+[   22.003638] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [remove_template] : entry!
+[   22.003643] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [remove_template] : exit!
+[   22.003646] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_remove_file, 0
+[   22.003650] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   22.003654] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   22.003657] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [st_remove_file] : exit!
+[   22.003661] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [st_remove_file] : entry!
+[   22.003665] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [remove_template] : entry!
+[   22.003669] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [remove_template] : exit!
+[   22.003673] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_remove_file, 0
+[   22.003677] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   22.004006] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   22.004011] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [st_remove_file] : exit!
+[   22.004015] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [st_remove_file] : entry!
+[   22.004019] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [remove_template] : entry!
+[   22.004022] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [remove_template] : exit!
+[   22.004026] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] st_remove_file, 0
+[   22.004030] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   22.004034] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   22.004038] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [st_remove_file] : exit!
+[   22.004041] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [st_remove_file] : entry!
+[   22.004045] (5)[229:tee_log]Trustonic TEE: c01(4)|[face] [remove_template] : entry!
+[   22.004749] (6)[229:tee_log]Trustonic TEE: c01(4)|[face] [remove_template] : exit!
+[   22.004755] (6)[229:tee_log]Trustonic TEE: c01(4)|[face] st_remove_file, 0
+[   22.004759] (6)[229:tee_log]Trustonic TEE: c01(4)|[face] is_file_exist enter
+[   22.004763] (6)[229:tee_log]Trustonic TEE: c01(4)|[face] file not exit. then return
+[   22.004767] (6)[229:tee_log]Trustonic TEE: c01(4)|[face] [st_remove_file] : exit!
+[   22.004772] (6)[229:tee_log]Trustonic TEE: c01(4)|STFACEUNLOCK line:(1228): exit ret:0
+[   22.004777] (6)[229:tee_log]Trustonic TEE: c01(4)|[face] face_ta_bio_command_handler, st_common_process_command end.
+[   22.004955] (5)[229:tee_log]Trustonic TEE: c01(4)|Wait for notification.
+[   22.005230] (5)[229:tee_log]Trustonic TEE: c01(1)|[face] face_ta_bio_command_handler, request    valid_size = 0
+[   22.005237] (5)[229:tee_log]Trustonic TEE: c01(1)|[face] face_ta_bio_command_handler, request  request_size = 0
+[   22.005242] (5)[229:tee_log]Trustonic TEE: c01(1)|[face] face_ta_bio_command_handler, request response_size = 4
+[   22.005680] (5)[229:tee_log]Trustonic TEE: c01(1)|Wait for notification.
+[   22.046325] (1)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > SET_GID(0x10)
+[   22.046336] (1)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x10 (0)
+[   22.046962] (0)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > LOAD_USER_DB(0x11)
+[   22.047319] (0)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][util_gp][DBG][fp_util_internal_generate_auth_id:293] authid=0xc50a9f96,1166b7b5
+[   22.047432] (0)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x11 (0)
+[   22.047767] (0)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > GET_DB_COUNT(0x13)
+[   22.047774] (0)[229:tee_log]Trustonic TEE: d01(1)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x13 (0)
+[   22.049187] (1)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > LOAD_AUTH_ID(0x18)
+[   22.049199] (1)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x18 (0)
+[   22.050106] (1)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:28] > LOAD_AUTH_ID(0x18)
+[   22.050117] (1)[229:tee_log]Trustonic TEE: d01(0)|[fp-gp][gp-entry][DBG][fp_ta_main_entry_point:32] < 0x18 (0)
+[   25.460798] (1)[229:tee_log]Trustonic TEE: 104(3)|MSH ASLR e01, UUID=09080000-0000-0000-0000-000000000000, code offset 0x00000000, mclib offset 0x07f93000
+[   25.487404] (7)[229:tee_log]Trustonic TEE: e01(7)|[crypto_eng] tlMain(): main... May 20 202110:28:30
+[   25.519841] (7)[229:tee_log]Trustonic TEE: 104(0)|MSH ASLR e01, UUID=09080000-0000-0000-0000-000000000000, code offset 0x00000000, mclib offset 0x07f43000
+[   25.533612] (7)[229:tee_log]Trustonic TEE: e01(4)|[crypto_eng] tlMain(): main... May 20 202110:28:30
+[   25.605433] (6)[229:tee_log]Trustonic TEE: 104(0)|MSH ASLR e01, UUID=09080000-0000-0000-0000-000000000000, code offset 0x00000000, mclib offset 0x07f81000
+[   25.686851] (5)[229:tee_log]Trustonic TEE: e01(4)|[crypto_eng] tlMain(): main... May 20 202110:28:30
+[   25.705457] (5)[229:tee_log]Trustonic TEE: 104(3)|MSH ASLR e01, UUID=09080000-0000-0000-0000-000000000000, code offset 0x00000000, mclib offset 0x07e73000
+[   25.722612] (3)[229:tee_log]Trustonic TEE: e01(6)|[crypto_eng] tlMain(): main... May 20 202110:28:30
+[   35.908627] (0)[229:tee_log]Trustonic TEE: e01(4)|t-base-MTK-ARMv8-Android-400C-V001-20180713_214233_52230_81596
+[   35.908640] (0)[229:tee_log]Trustonic TEE: e01(4)|tlTeeGatekeeper: GateKeeper TA version 0100.258
+[   35.913843] (6)[229:tee_log]Trustonic TEE: e01(0)|tlTeeGatekeeper: DEBUG: so_storage.c:59 No need to restore
+[   35.992008] (0)[229:tee_log]Trustonic TEE: e01(1)|t-base-MTK-ARMv8-Android-400C-V001-20180713_214233_52230_81596
+[   35.992020] (0)[229:tee_log]Trustonic TEE: e01(1)|tlTeeGatekeeper: GateKeeper TA version 0100.258
+[   35.993150] (0)[229:tee_log]Trustonic TEE: e01(2)|tlTeeGatekeeper: DEBUG: so_storage.c:59 No need to restore
+[   36.020183] (6)[229:tee_log]Trustonic TEE: e01(2)|t-base-MTK-ARMv8-Android-400C-V001-20180713_214233_52230_81596
+[   36.020207] (6)[229:tee_log]Trustonic TEE: e01(2)|tlTeeGatekeeper: GateKeeper TA version 0100.258
+[   36.021270] (1)[229:tee_log]Trustonic TEE: e01(2)|tlTeeGatekeeper: DEBUG: so_storage.c:59 No need to restore
+[   36.907874] (4)[229:tee_log]Trustonic TEE: e01(1)|t-base-MTK-ARMv8-Android-400C-V001-20180713_214233_52230_81596
+[   36.907888] (4)[229:tee_log]Trustonic TEE: e01(1)|tlTeeGatekeeper: GateKeeper TA version 0100.258
+[   36.911276] (4)[229:tee_log]Trustonic TEE: e01(6)|tlTeeGatekeeper: DEBUG: so_storage.c:59 No need to restore
+[   37.038966] (6)[229:tee_log]Trustonic TEE: e01(6)|t-base-MTK-ARMv8-Android-400C-V001-20180713_214233_52230_81596
+[   37.038979] (6)[229:tee_log]Trustonic TEE: e01(6)|tlTeeGatekeeper: GateKeeper TA version 0100.258
+[   37.040612] (6)[229:tee_log]Trustonic TEE: e01(6)|tlTeeGatekeeper: DEBUG: so_storage.c:59 No need to restore
+[   37.076878] (4)[229:tee_log]Trustonic TEE: e01(2)|t-base-MTK-ARMv8-Android-400C-V001-20180713_214233_52230_81596
+[   37.076892] (4)[229:tee_log]Trustonic TEE: e01(2)|tlTeeGatekeeper: GateKeeper TA version 0100.258
+[   37.088066] (4)[229:tee_log]Trustonic TEE: e01(1)|tlTeeGatekeeper: DEBUG: so_storage.c:59 No need to restore
+[   37.163088] (6)[229:tee_log]Trustonic TEE: 104(6)|MSH ASLR e01, UUID=09080000-0000-0000-0000-000000000000, code offset 0x00000000, mclib offset 0x07e11000
+[   37.284548] (6)[229:tee_log]Trustonic TEE: e01(2)|[crypto_eng] tlMain(): main... May 20 202110:28:30
+[   76.471393] (4)[229:tee_log]Trustonic TEE: a01(0)|tlTeeKeymaster: [KEYMASTER] read_rpmb_data() returns 0
+[   76.471408] (4)[229:tee_log]Trustonic TEE: a01(0)|load_attestation_data:477: [KEYMASTER] Loading attestation data...
+[   76.471415] (4)[229:tee_log]Trustonic TEE: a01(0)|load_attestation_data:545: [KEYMASTER] load_attestation_data() returns 0!
