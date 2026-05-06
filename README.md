@@ -166,11 +166,11 @@ The materials:
 
 	It is evident that the trustlet binary wasn't treated well before going to production, leaving it unstripped. From the string view, we can assume that this trustlet definitely carries the provision process(factory) and parses the attestation data.
 
-	At this stage, the analysis process becomes harsher as it requires various logic tracing and disassembling the boot stages deeper. Because of unstripped images, the logic tracing process will be easier.
+	At this stage, the analysis process becomes harsher as it requires various logic tracing and disassembling the boot stages more deeply. Because of unstripped images, the logic tracing process will be easier.
 
 	Based on the string view, the trustlet can be identified as teeKeyMaster4
 
-	
+	Some discrete data we have: 
 
 # Project progress #
  - 45% (analyzing crypto accelerator registers/mapping syscalls).
