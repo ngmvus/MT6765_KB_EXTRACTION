@@ -170,7 +170,8 @@ The materials:
 
 	Based on the string view, the trustlet can be identified as teeKeyMaster4
 
-	Some discrete data we have: 
+	Some discrete data we have: TEEdmesg.txt(Acquired at early boot stage after LK)
+
 
 # Project progress #
  - 45% (analyzing crypto accelerator registers/mapping syscalls).
