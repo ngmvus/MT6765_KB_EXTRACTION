@@ -170,8 +170,69 @@ The materials:
 
 	Based on the string view, the trustlet can be identified as teeKeyMaster4
 
-	Some discrete data we have: TEEdmesg.txt(Acquired at early boot stage after LK)
+	Next stage, we will analyze the whole TEE to unveil the decryption processes.
 
+  - # TEE analysis #
+     Some discrete data we have: TEEdmesg.txt(Acquired at early boot stage after LK)
 
+	A quotation from the log file:
+	
+	 	[    4.669389] (0)[532:mcDriverDaemon]Trustonic TEE: admin_open: daemon connection open, TGID 532
+		[    4.679228] (3)[282:rpmb_open]Trustonic TEE: ERROR -1 mcp_cmd: open session: res 32
+		[    4.679234] (2)[229:tee_log]Trustonic TEE: 201(1)|Mounting partition 1...
+		[    4.679241] (2)[229:tee_log]Trustonic TEE: 201(1)|[STH2] ERROR static_fileServerMountFileSystem : failed to mount partition 1
+		[    4.680846] (1)[229:tee_log]Trustonic TEE: 401(2)|TA SPT2 : Starting.
+		[    4.680867] (1)[229:tee_log]Trustonic TEE: 401(2)|TA SPT2 : tbase info.
+		[    4.680873] (1)[229:tee_log]Trustonic TEE: 401(2)|tlApi version    =  0x00010014
+		[    4.680879] (1)[229:tee_log]Trustonic TEE: 401(2)|productId        = t-base-MTK-A64-Android-410a-V107-20190917_223909_73476_99814
+		[    4.680885] (1)[229:tee_log]Trustonic TEE: 401(2)|versionMci       = 0x00010007
+		[    4.680891] (1)[229:tee_log]Trustonic TEE: 401(2)|versionSo        = 0x00020002
+		[    4.680896] (1)[229:tee_log]Trustonic TEE: 401(2)|versionMclf      = 0x00020005
+		[    4.680902] (1)[229:tee_log]Trustonic TEE: 401(2)|versionContainer = 0x00020001
+		[    4.680908] (1)[229:tee_log]Trustonic TEE: 401(2)|versionMcConfig  = 0x00000003
+		[    4.680913] (1)[229:tee_log]Trustonic TEE: 401(2)|versionTlApi     = 0x00010014
+		[    4.680919] (1)[229:tee_log]Trustonic TEE: 401(2)|versionDrApi     = 0x00010004
+		[    4.680925] (1)[229:tee_log]Trustonic TEE: 401(2)|versionCmp       = 0x00000000
+		[    4.686841] (5)[532:mcDriverDaemon]Trustonic TEE: ERROR -1 mcp_cmd: open session: res 8
+		[    4.692187] (2)[229:tee_log]Trustonic TEE: 201(0)|Mounting partition 1...
+		[    4.694477] (2)[229:tee_log]Trustonic TEE: 201(1)|Partition 1 successfully mounted
+		[    4.701387] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] (Infra)reg0-0 = 0x10100000
+		...
+		[    4.705095] (1)[229:tee_log]Trustonic TEE: 601(1)|[SEC DRV] T[DEVAPC] <6><7><6><5>
+		[    4.706799] (3)[229:tee_log]Trustonic TEE: 701(1)|[<t Driver Drspi] 1.0, Build Feb 22 2024, 01:00:22
+		[    4.741325] (2)[229:tee_log]Trustonic TEE: a01(3)|teeKeyMaster4-package-4.0.2-20190104_130719_3818_90370
+		[    4.741338] (2)[229:tee_log]Trustonic TEE: a01(3)|tlTeeKeymaster: Keymaster TA version 0400.0000
+		[    4.741344] (2)[229:tee_log]Trustonic TEE: a01(3)|tlTeeKeymaster: Limiting API version to 4
+		[    4.741350] (2)[229:tee_log]Trustonic TEE: a01(3)|tlTeeKeymaster: Neon instructions will be used
+		[    4.744525] (2)[229:tee_log]Trustonic TEE: b01(3)|t-base-MTK-ARMv8-Android-400C-V001-20180713_214233_52230_81596
+		[    4.744546] (2)[229:tee_log]Trustonic TEE: b01(3)|[DrAndroid] Version 1.0
+		[    4.745043] (2)[229:tee_log]Trustonic TEE: a01(3)|[verifiedBoot_GetBootPatchlevel] verifiedBoot_GetBootPatchlevel boot_patchlevel = 135c145
+		[    8.352682] (3)[229:tee_log]Trustonic TEE: c01(4)|t-base-MTK-ARMv8-Android-400C-V001-20180713_214233_52230_81596
+		[    8.352708] (3)[229:tee_log]Trustonic TEE: c01(4)|tlTeeGatekeeper: GateKeeper TA version 0100.258
+		[    9.735872] (1)[229:tee_log]Trustonic TEE: 104(4)|MSH ASLR c01, UUID=09080000-0000-0000-0000-000000000000, code offset 0x00000000, mclib offset 0x07f62000
+		[    9.759932] (0)[229:tee_log]Trustonic TEE: c01(4)|[crypto_eng] tlMain(): main... May 20 202110:28:30
+		[    9.931593] (5)[229:tee_log]Trustonic TEE: c01(5)|Wait for notification.
+		[    9.931608] (5)[229:tee_log]Trustonic TEE: c01(5)|[<t Trusted Application Fingerprint Cards], Build Aug 20 2020, 11:21:39
+		[    9.931614] (5)[229:tee_log]Trustonic TEE: c01(5)|tlApi version 0x00010014
+		[    9.931618] (5)[229:tee_log]Trustonic TEE: c01(5)|productId        = t-base-MTK-A64-Android-410a-V107-20190917_223909_73476_99814
+		[    9.931623] (5)[229:tee_log]Trustonic TEE: c01(5)|versionMci       = 0x00010007
+		[    9.931628] (5)[229:tee_log]Trustonic TEE: c01(5)|versionSo        = 0x00020002
+		[    9.931632] (5)[229:tee_log]Trustonic TEE: c01(5)|versionMclf      = 0x00020005
+		[    9.931637] (5)[229:tee_log]Trustonic TEE: c01(5)|versionContainer = 0x00020001
+		[    9.931641] (5)[229:tee_log]Trustonic TEE: c01(5)|versionMcConfig  = 0x00000003
+		[    9.931645] (5)[229:tee_log]Trustonic TEE: c01(5)|versionTlApi     = 0x00010014
+		[    9.931650] (5)[229:tee_log]Trustonic TEE: c01(5)|versionDrApi     = 0x00010004
+		[    9.931654] (5)[229:tee_log]Trustonic TEE: c01(5)|versionCmp       = 0x00000000
+	
+	The log provides a clear view of the initialization stages of TEE.
+
+	(1) 4.669389 -> 4.694477: TEEOS preparation, mounting files from mcRegistry(tlbins and drbins are being loaded after that).
+	(2) 4.701387 -> 4.705095: DEVAPC doin its job(05120000000000000000000000000000.drbin/tlbin)
+	(3) 4.701387 -> 4.706799: Drspi driver loaded(030b0000000000000000000000000000.drbin/tlbin)
+	(4)	4.741325 -> 4.741350: tlTeeKeymaster4 loaded(0706000000000000000000000000004d.tlbin)
+	(5)	4.744525 -> 4.745043: DrAndroid loaded(07170000000000000000000000000000.drbin/tlbin)
+	(6) 8.352682 -> 9.759932: TlTeeGateKeeper loaded, active and calling crypto engine(07061000000000000000000000000000.tlbin)
+	(7) 9.931608 -> 9.931654: Fingerprint manager loaded()
+	
 # Project progress #
  - 45% (analyzing crypto accelerator registers/mapping syscalls).
