@@ -1,0 +1,492 @@
+#T#Preloader Start=0
+Pll init start...
+Pll init Done!
+#T#PLL=2
+#T#GPIO=3
+#T#WDT_PRE=0
+[PWRAP] si_en_sel = 0, si_ck_sel = 0, si_sample_ctrl = 0, rdata = 96A9
+[PWRAP] si_en_sel = 0, si_ck_sel = 1, si_sample_ctrl = 20, rdata = 5AA5, Pass
+[PWRAP] InitSiStrobe (5, 5, 5865) Data Boundary Is Found !!
+[PWRAP] SI Strobe Calibration For PMIC 0 Done, (40, 5)
+[PWRAP] Read Test pass, return_value=0x0
+[PWRAP] Write Test pass
+[PWRAP] RECORD_CMD0:  0x152A (Last one command addr)
+[PWRAP] RECORD_WDATA0:0x2D (Last one command wdata)
+[PWRAP] RECORD_CMD1:  0x170E (Last second command addr)
+[PWRAP] RECORD_WDATA1:0x78 (Last second command wdata)
+[PWRAP] RECORD_CMD2:  0x152A (Last third command addr)
+[PWRAP] RECORD_WDATA2:0x2D (Last third command wdata)
+[PWRAP] init pass, ret=0.
+
+#T#PWRAP=9
+DATE_CODE_YY:1, DATE_CODE_WW:1A
+[SegCode] Segment Code:0x8, PROJECT_CODE:0x0, FAB_CODE:0x2, RW_STA:0x0, CTL:0x0, DCM:0x4
+[HT22] : 1 0x4 0x4 done
+0:0x80000000, 1:0x1100, 2:0x1, 3:0x80002, 4:0x40000000, STA:0x0, S:0x4, FAB0:0x6765, FAB11:0x0
+A:0x0, B:0x3F, C:0x40, D:0x1F, E:0x1, F:0x3, G:0x2
+#T#I2C=3
+[PMIC]Preloader Start
+[PMIC]MT6357 CHIP Code = 0x5730
+[PMIC]POWER_HOLD :0x1
+[PMIC]TOP_RST_STATUS[0x152]=0x48
+[PMIC]PONSTS[0xC]=0x0
+[PMIC]POFFSTS[0xE]=0x400
+[PMIC]PGSTATUS0[0x14]=0xFFFE
+[PMIC]PSOCSTATUS[0x16]=0x0
+[PMIC]BUCK_OC_SDN_STATUS[0x1434]=0x0
+[PMIC]BUCK_OC_SDN_EN[0x1444]=0x1F1F
+[PMIC]THERMALSTATUS[0x18]=0x0
+[PMIC]STRUP_CON4[0xA1C]=0x0
+[PMIC]TOP_RST_MISC[0x14C]=0x4
+[PMIC]TOP_CLK_TRIM[0x38E]=0x6AC0
+latch VPROC 800000 uV
+latch VSRAM_PROC 900000 uV
+latch VCORE 800000 uV
+latch VMODEM 800000 uV
+[pmic_check_rst] DDLO_RSTB
+[pmic_check_rst] AP Watchdog
+[PMIC]just_rst = 0
+No EFUSE SW Load
+battery exists
+[PMIC]disable usbdl wo battery
+[PMIC]pmic_wdt_set Reg[0x14C]=0x25
+[rt5738_driver_probe]
+[rt5738_hw_component_detect] exist = 0, Chip ID = A801
+[rt5738_driver_probe] PL rt5738_vdd2 is not exist
+[rt5738_hw_component_detect] exist = 1, Chip ID = 0
+[rt5738_driver_probe] PL g_rt5738_1_hw_exist=1, g_rt5738_driver_ready=1
+[hl7593_driver_probe]
+[hl7593_read_interface] Reg[3]=0xA8
+[hl7593_read_interface] val=0xA8
+[hl7593_read_interface] Reg[4]=0x1
+[hl7593_read_interface] val=0x1
+[hl7593_read_interface] Reg[5]=0x81
+[hl7593_read_interface] val=0x1
+PGOOD = 1, chip_id = 43009
+[hl7593_hw_component_detect] exist = 1, Chip ID = A801
+hl7593_vdd2_hw_init
+[hl7593_read_interface] Reg[0]=0xD4
+[hl7593_read_interface] val=0xD4
+[0x0]=0xD4 [hl7593_read_interface] Reg[1]=0xD4
+[hl7593_read_interface] val=0xD4
+[0x1]=0xD4 [hl7593_read_interface] Reg[2]=0x80
+[hl7593_read_interface] val=0x80
+[0x2]=0x80 [hl7593_read_interface] Reg[3]=0xA8
+[hl7593_read_interface] val=0xA8
+[0x3]=0xA8 [hl7593_read_interface] Reg[4]=0x1
+[hl7593_read_interface] val=0x1
+[0x4]=0x1 [hl7593_read_interface] Reg[5]=0x81
+[hl7593_read_interface] val=0x81
+[0x5]=0x81 [hl7593_driver_probe] PL g_hl7593_0_hw_exist=1, g_hl7593_driver_ready=1
+[hl7593_read_interface] Reg[3]=0x0
+[hl7593_read_interface] val=0x0
+[hl7593_read_interface] Reg[4]=0x0
+[hl7593_read_interface] val=0x0
+[hl7593_read_interface] Reg[5]=0x81
+[hl7593_read_interface] val=0x1
+PGOOD = 1, chip_id = 0
+[hl7593_hw_component_detect] exist = 0, Chip ID = 0
+[hl7593_driver_probe] PL hl7593_vddq is not exist
+[hl7593_set_voltage] id = 0, set_val = 1125000 
+[hl7593_read_interface] Reg[0]=0xD4
+[hl7593_read_interface] val=0x54
+[hl7593_get_voltage] id = 0, get_val = 1125000 
+hl7593_vdd2=1125000 uV
+[fan53526_driver_probe]
+[I2C] id=3,addr: 60, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[I2C] id=3,addr: 60, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[I2C] id=3,addr: 60, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+[fan53526_hw_component_detect] exist = 0, Chip ID = 304
+[fan53526_driver_probe] PL fan53526_vdd2 is not exist
+[fan53526_hw_component_detect] exist = 0, Chip ID = 0
+[fan53526_driver_probe] PL fan53526_vddq is not exist
+register vs1 OK
+register vmodem OK
+register vcore OK
+register vproc OK
+register vpa OK
+register vsram_others OK
+register vsram_proc OK
+register vdram OK
+[PMIC]Init done
+#T#PMIC=49
+#T#PLL POST Init=0
+[SD0] SET_CLK(260kHz): SCLK(259kHz) MODE(0) DDR(0) DIV(385) DS(0) RS(0)
+[SD0] SET_CLK(260kHz): SCLK(259kHz) MODE(2) DDR(1) DIV(192) DS(0) RS(0)
+[SD0] Size: 29820 MB, Max.Speed: 52000 kHz, blklen(512), nblks(61071360)
+[SD0] Initialized, eMMC45
+[SD0] SET_CLK(52000kHz): SCLK(50000kHz) MODE(2) DDR(1) DIV(1) DS(0) RS(0)
+#T#Boot dev init=69
+[PLFM] Init Boot Device: OK(0)
+#T#Long Pressed Reboot=0
+[PLFM] Init PWRAP: OK(0)
+[PLFM] Init PMIC: OK(0)
+[PLFM] chip_hw_ver[CA00], chip_sw_ver[0]
+clk_buf_dump_dts_log: PMIC_CLK_BUF?_STATUS=2 1 1 2 0 0 0
+clk_buf_dump_dts_log: PMIC_CLK_BUF?_DRV_CURR=1 1 1 1 1 1 1
+clk_buf_dump_clkbuf_log DCXO_CW00/02/11/13/14/15/16/20/top_spi_con1=0x4EDD 3AEE 8000 98E9 82B5 A2AA 9455 11 1
+clk_buf_dump_clkbuf_log DCXO_CW00/02/11/13/14/15/16/20/top_spi_con1=0x4EDD 3AEE 8000 98E9 82B5 A2AA 9455 11 0
+clk_buf_init_pmic_wrap: DCXO_CONN_ADR0/WDATA0/ADR1/WDATA1=0x44A/0/44A/1
+clk_buf_init_pmic_wrap: DCXO_NFC_ADR0/WDATA0/ADR1/WDATA1/EN=0x78C/100/78A/100/3
+[RTC]switch to dcxo
+[RTC]rtc 2sec reboot is not enabled
+[PMIC] pmic_init_setting end. v180104
+[MT6357] 1 1,48
+[MT6357] get volt 6, 61, 900000
+vsram_proc = 900000 uV
+[MT6357] get volt 3, 45, 800000
+vproc = 800000 uV
+[MT6357] get volt 5, 61, 900000
+vsram_others = 900000 uV
+[MT6357] get volt 2, 45, 800000
+vcore = 800000 uV
+[MT6357] get volt 1, 48, 800000
+vmodem = 800000 uV
+[MT6357] 2 5,1
+[MT6357] 2 6,1
+[MT6357] 2 3,1
+[MT6357] 2 2,1
+[MT6357] 2 1,1
+[DDR Reserve] ddr reserve mode not be enabled yet
+#T#chk DDR Reserve status=94
+Enter mtk_kpd_gpio_set! 
+after set KP enable: KP_SEL = 0x1C70 !
+#T#check Boot status-RTC=34
+#T#check Boot status-PMIC=0
+#T#check Boot status-WDT=0
+power key is pressed
+battery exists
+[PLFM] Power key boot!
+#T#check Boot status=1
+[PMIC]POWER_HOLD :0x1
+[RTC]rtc_lpsd_solution
+#T#rtc_bbpu_power_on=2
+pl chr:1 monitor:1 plchr:0 gain:1035
+battery exists
+[pl_check_bat_protect_status]: check VBAT=4242mV with 0mV, VCHR=5166mV ,VCHR_HV=6500mv, start charging
+[pl_check_bat_protect_status]: check VBAT=4242mV with 0mV, stop charging
+#T#Enable PMIC Kpd clk=10
+mtk_kpd_gpio_set Already!
+mtk detect key function pmic_detect_homekey MTK_PMIC_RST_KEY = 17
+Log Turned Off.
+#T#UART DYNAMIC SWITCH=1
+[dramc] init partition address is 0x0000000000008000
+[dramc] init SRAM region for DRAM exception detection
+[dramc] LAST_DRAM_FATAL_ERR_FLAG = 0x0
+for cold boot, always return 0
+[MT6357] 4 2,1
+[MT6357] 2 7,0
+[hl7593_enable] id =0, en =1, ret =1 
+[hl7593_set_mode] error mode = 1 only 0 or 3
+[hl7593_set_voltage] id = 0, set_val = 1125000 
+[MT6357] vp
+[MT6357] get volt 2, 45, 800000
+Vcore = 800000
+[hl7593_read_interface] Reg[0]=0xD4
+[hl7593_read_interface] val=0x54
+[hl7593_get_voltage] id = 0, get_val = 1125000 
+Vdram = 1125000
+Vddq = 600000
+dvfsrc_opp_level_mapping: PTPOD0: 0x100090 (ct_enable:1, skip:1, ddr=0, info2=0x1)
+get_vb_volt: PTPOD10: 0xA5855
+dvfsrc_opp_level_mapping: default vcore_opp_uv: 800000, 700000, 700000, 650000
+dvfsrc_opp_level_mapping: final vcore_opp_uv: 800000, 700000, 700000, 650000
+dvfsrc_opp_level_mapping: OPP_2 and OPP_3 adj to 700000 and 700000
+[EMI] mcp_dram_num:12,discrete_dram_num:0,enable_combo_dis:0
+eMMC cid: 90014A68,42386150,3E030025,5381C7B1
+found:1,i:1
+[EMI] MDL number = 1
+[MT6357] 1 2,29
+Read voltage for 800
+Vio18 = 1800000
+[MT6357] get volt 2, 29, 700000
+Vcore = 700000
+[hl7593_read_interface] Reg[0]=0xD4
+[hl7593_read_interface] val=0x54
+[hl7593_get_voltage] id = 0, get_val = 1125000 
+Vdram = 1125000
+Vddq = 600000
+[MT6357] 1 2,37
+Read voltage for 1200
+Vio18 = 1800000
+[MT6357] get volt 2, 37, 750000
+Vcore = 750000
+[hl7593_read_interface] Reg[0]=0xD4
+[hl7593_read_interface] val=0x54
+[hl7593_get_voltage] id = 0, get_val = 1125000 
+Vdram = 1125000
+Vddq = 600000
+[MT6357] 1 2,45
+Read voltage for 1600
+Vio18 = 1800000
+[MT6357] get volt 2, 45, 800000
+Vcore = 800000
+[hl7593_read_interface] Reg[0]=0xD4
+[hl7593_read_interface] val=0x54
+[hl7593_get_voltage] id = 0, get_val = 1125000 
+Vdram = 1125000
+Vddq = 600000
+[MT6357] 4 2,0
+[MT6357] 1 2,45
+[MT6357] get volt 2, 45, 800000
+Vcore = 800000
+[MEM] 1st complex R/W mem test pass (start addr:0x48000000)
+[MEM] 2nd complex R/W mem test pass (start addr:0x80000000, 0x0 @Rank1)
+[LastDRAMC] 0x10E40C: 0x19870611
+[LastDRAMC] 0x10E410: 0x33333333
+[LastDRAMC] 0x10E414: 0x333F333F
+[LastDRAMC] 0x10E418: 0x198B061F
+[LastDRAMC] 0x10E41C: 0x2
+[LastDRAMC] 0x10E420: 0x0
+[LastDRAMC] 0x10E424: 0x80000000
+[LastDRAMC] 0x10E428: 0x0
+[LastDRAMC] 0x10E42C: 0x0
+[LastDRAMC] 0x10E430: 0x0
+[LastDRAMC] 0x10E434: 0x0
+[LastDRAMC] 0x10E438: 0x0
+[LastDRAMC] 0x10E43C: 0x0
+[LastDRAMC] 0x10E440: 0x0
+[LastDRAMC] 0x10E444: 0x0
+[LastDRAMC] 0x10E448: 0x0
+[LastDRAMC] 0x10E44C: 0xC3500
+[LastDRAMC] 0x10E450: 0xB71B0
+[LastDRAMC] 0x10E454: 0xAAE60
+[dramc] DRAM_FATAL_ERR_FLAG = 0x80000000
+#T#mem_init=435
+#T#Init Dram buf=0
+RAM_CONSOLE using SRAM
+RAM_CONSOLE start: 0x10DC00, size: 0x800, sig: 0x43474244
+RAM_CONSOLE preloader last status: 0x0 0x0 0x0 
+RAM_CONSOLE wdt status (0x0)=0x0
+#T#Ram console=1
+mtk_kpd_gpio_set Already!
+mtk detect key function pmic_detect_homekey MTK_PMIC_RST_KEY = 17
+DL1: status:0
+DL2: status:0
+GPIO_OPPO_VOL_DOWN_KEY: status:0
+mtk detect key function pmic_detect_homekey MTK_PMIC_RST_KEY = 17
+mtk detect key function pmic_detect_homekey MTK_PMIC_RST_KEY = 17
+CUSTOM_CONFIG_MAX_DRAM_SIZE: 0x0000000800000000
+total_dram_size: 0x00000000C0000000, max_dram_size: 0x0000000800000000
+dump mblock info 
+mblock[i] start=0000000040000000 size=0000000060000000
+mblock[i] start=00000000A0000000 size=0000000060000000
+mblock_reserve: 000000009FFFF000 - 00000000A0000000 from mblock 0
+mblock_reserve: 00000000FFFFF000 - 0000000100000000 from mblock 1
+[GPT_PL]Success to find valid GPT.
+#T#part_init=112
+preloader is_new_cdt start
+pl ocdt unencrypt data offset:16, len:52
+preloader use newcdt g_project nVersion:1 nProject: 131707 nDtsi: 131707 nAudio: 131707 Feature0-9: 0 0 0 0 0 0 0 0 0 0
+[oppo_engcdt] eng_version 0(release), confidential 1
+[OPPO_CUSTOM_PARTITION] part item(0) read from bdev(1) with error magic number 0x0
+[oppo] download over: download over  2021-02-24 11:10:33 IMEI:         (null) software version:CPH2179PU_11_A.17_201228_8cedfeaf.ofp, ID: 2027B DownloadTool_V1.1.41 Upgrade download user:ODM001 Ip:172.16.52.144 Mac:8C-EC-4B-B0-BA-F0 Net Status:intranet ALL checksum +Userdata   !–
+[oppo] gain_als: 1468 prox_offset(0 0 0, 0 0 0) gsensor_offset(0 0 0)
+preloader get new cdt success
+Detect fastmeta pin 3: mode 0, out 0, pull en 1, pull up 1, value 1.
+Detect fastmeta pin 4: mode 0, out 0, pull en 1, pull up 1, value 1.
+#T#read_meta_proinfo=5
+#T#store_switch_to_dram=74
+#T#part_dump=0
+
+[LIB] Loading SEC config
+[LIB] Name = 
+[LIB] Config = 0x22, 0x22
+0x31,0x41,0x35,0x32
+[DCU] HACC_CON setting: 0x30051
+[DCU] HACC_CON1 setting: 0xF0F, 0x101
+[DCU] DCU_EN_0 setting: 0xFFFF5FAA, 0xFFFFFFFF
+[LIB] seclib_img_auth_load_sig [LIB] CFG read size '0x2000' '0x3C'
+0x4D4D4D4D
+[LIB] SEC CFG 'v4' exists
+[LIB] HW DEC
+[LIB] SEC CFG is valid. Lock state is 3 
+#T#Sec lib init=4
+[OPPO_CUSTOM_PARTITION] part item(0) read from bdev(1) with error magic number 0x0
+mmc rpmb key is already programmed!!
+#T#rpmb=2
+[I2C] id=5,addr: 6B, transfer error
+[I2C] I2C_ACKERR
+[I2C] write_read 0x10001 bytes fails,ret=-121.
+I2CR[0x0000000B] fail, code = -1
+sgm41512_is_hw_exist error 
+#T#before bldr_handshake=2
+#T#delete seclib_brom_meta_mode() for security=0
+[OPPO_CUSTOM_PARTITION] part item(0) read from bdev(1) with error magic number 0x0
+mtk_kpd_gpio_set Already!
+mtk detect key function pmic_detect_homekey MTK_PMIC_RST_KEY = 17
+DL1: status:0
+DL2: status:0
+GPIO_OPPO_VOL_DOWN_KEY: status:0
+mtk detect key function pmic_detect_homekey MTK_PMIC_RST_KEY = 17
+mtk detect key function pmic_detect_homekey MTK_PMIC_RST_KEY = 17
+[OPPO_CUSTOM_PARTITION] part item(0) read from bdev(1) with error magic number 0x0
+[PMIC]IsUsbCableIn 1
+[USBD] USB Full Speed
+usb_connect, return false directly
+[TOOL] USB enum timeout!
+#T#USB handshake=684
+#T#bldr_handshake=0
+
+Device APC domain init setup:
+
+APC_CON: INFRA(0x0), MD(0x0), MM(0x0)
+#T#sec_boot_check=0
+mblock_reserve: 0000000047D80000 - 0000000047DD0000 from mblock 0
+mblock_reserve: 00000000BFFC0000 - 00000000C0000000 from mblock 3
+#T#trustzone pre init=2
+mblock_reserve: 000000007FF00000 - 000000007FFC0000 from mblock 1
+[LIB] S-CHIP
+sbc_en = 1
+sbc_en = 1
+[SBC] cert verify, part = sspm_1, img = tinysys-sspm...ok
+otp ver:0
+[ver]ver:(verk,verc,otp)=(0, 0, 0) ok
+[SBC] img auth ok
+[LIB] S-CHIP
+sbc_en = 1
+sbc_en = 1
+[SBC] cert verify, part = lk, img = lk...ok
+[ver]ver:(verk,verc,otp)=(0, 0, 0) ok
+[SBC] img auth ok
+[LIB] S-CHIP
+sbc_en = 1
+sbc_en = 1
+[SBC] cert verify, part = tee1, img = atf...ok
+[ver]ver:(verk,verc,otp)=(0, 0, 0) ok
+[SBC] img auth ok
+[LIB] S-CHIP
+sbc_en = 1
+sbc_en = 1
+[SBC] cert verify, part = tee1, img = tee...ok
+[ver]ver:(verk,verc,otp)=(0, 0, 0) ok
+mblock_reserve: 000000007CD00000 - 000000007FF00000 from mblock 1
+[SBC] img auth ok
+#T#load images=562
+#T#lastpc init=0
+[IMG_VER] pl ver check, ver=(0, 1)
+[ver]bypass update
+otp ver:0
+[oppo da]get da version ok. ret=0 da_ver=0
+[MT6357] get volt 3, 45, 800000
+[PICACHU] Range: 85-84
+[MT6357] get volt 6, 61, 900000
+[MT6357] get volt 3, 45, 800000
+[MT6357] 1 6,89
+[MT6357] 1 3,73
+[MT6357] 1 6,97
+[MT6357] 1 3,85
+[MT6357] get volt 3, 85, 1050000
+[MT6357] get volt 6, 97, 1125000
+[PICACHU] F 2301000 1799000 1050500 vp=105000 vs=112500
+[PICACHU] cfg cores
+[PICACHU] run
+[MT6357] get volt 6, 97, 1125000
+[MT6357] get volt 3, 85, 1050000
+[PICACHU] wfe: 0xEE
+[MT6357] get volt 6, 97, 1125000
+[MT6357] get volt 3, 85, 1050000
+[MT6357] 1 3,57
+[MT6357] 1 6,73
+[MT6357] 1 3,45
+[MT6357] 1 6,61
+[PICACHU] R[0x10200264]: 0xE00000, v: 0x1000000, bs: 0
+[PICACHU] 101875 76 88
+#T#picachu=18
+battery exists
+#T#Battery detect=0
+mblock_reserve: 0000000047DD0000 - 0000000047FD0000 from mblock 1
+mblock_reserve: 0000000047C80000 - 0000000047C90000 from mblock 0
+mblock_reserve: 0000000047C90000 - 0000000047D70000 from mblock 1
+mblock_reserve: 0000000047D70000 - 0000000047D80000 from mblock 1
+#T#Set Argu - before CHR_INFO=3
+[mt_charger_type_detection] Got data !!, 0, 1
+#T#Set Argu - after CHR_INFO=0
+RAM_CONSOLE offset:0xAC0
+RAM_CONSOLE sram_plat_dbg_info_addr:0x10E400, sram_plat_dbg_info_size:0x200, sram_log_store_addr:0x10E700, sram_log_store_size:0x100
+RAM_CONSOLE mrdump_addr:0x10E800, mrdump_size:0x1400, dram_addr:0x47C80000, dram_size:0x10000
+RAM_CONSOLE pstore_addr:0x47C90000, pstore_size:0xE0000, pstore_console_size:0x40000, pstore_pmsg_size:0x10000
+RAM_CONSOLE mrdump_mini_header_addr:0x47D70000, mrdump_mini_header_size:0x10000, magic1:0x61646472, magic2:0x73697A65
+[oppo] download_status = -1725602216
+[oppo platform] cdt nVersion:1 nProject:131707 nDtsi:131707 nAudio:131707, newcdt:1 download:0x99168832, Feature0-9:0 0 0 0 0 0 0 0 0 0, eng_version:0 confidential:1
+#T#Set Argu=5
+BOOT_REASON: 0
+BOOT_MODE: 0
+MEM_SIZE: 0x23CBB8
+MEM_SIZE: 0x23CBB8
+BOOT_TIME: 2187
+#T#Dump Argu=1
+#T#Boot Argu=0
+[TZ_TBASE] teearg.magic: 0x434D4254
+[TZ_TBASE] teearg.length: 0x0
+[TZ_TBASE] teearg.dRamBase: 0x40000000
+[TZ_TBASE] teearg.dRamSize: 0xC0000000
+[TZ_TBASE] teearg.secDRamBase: 0x7CD00000
+[TZ_TBASE] teearg.secDRamSize: 0x2900000
+[TZ_TBASE] teearg.secIRamBase: 0x0
+[TZ_TBASE] teearg.secIRamSize: 0x0
+[TZ_TBASE] teearg.total_number_spi: 352
+[TZ_TBASE] teearg.ssiq_number: 303
+#T#trustzone post init=3
+ 0 name: dramc-rk0
+[8588] mblock-create-debug-R[1].start: 0xfffff000, sz: 0x1000 map: 0 name: dramc-rk1
+[8588] mblock-create-debug-R[2].start: 0x7ffc0000, sz: 0x40000 map: 1 name: log_store
+[8588] mblock-create-debug-R[3].start: 0x47d80000, sz: 0x50000 map: 0 name: atf-reserved
+[8588] mblock-create-debug-R[4].start: 0xbffc0000, sz: 0x40000 map: 0 name: atf-log-reserved
+[8588] mblock-create-debug-R[5].start: 0x7ff00000, sz: 0xc0000 map: 0 name: SSPM-reserved
+[8588] mblock-create-debug-R[6].start: 0x7cd00000, sz: 0x3200000 map: 0 name: tee-reserved
+[8589] mblock-create-debug-R[7].start: 0x47c80000, sz: 0x10000 map: 0 name: ram_console
+[8589] mblock-create-debug-R[8].start: 0x47c90000, sz: 0xe0000 map: 0 name: pstore
+[8589] mblock-create-debug-R[9].start: 0x47d70000, sz: 0x10000 map: 0 name: minirdump
+[8589] mblock-create-debug-R[10].start: 0x7b870000, sz: 0x1490000 map: 0 name: framebuffer
+[8589] mblock-create-debug-R[11].start: 0xbff40000, sz: 0x80000 map: 0 name: atf-ramdump-memory
+[8589] mblock-create-debug-R[12].start: 0x77ff0000, sz: 0x10000 map: 0 name: SPM-reserved
+[8589] mblock-create-debug-R[13].start: 0x9fc00000, sz: 0x300000 map: 0 name: SCP-reserved
+[8589] mblock-create-debug-R[14].start: 0x9ffef000, sz: 0x10000 map: 1 name: ccci_tag_mem
+[8589] mblock-create-debug-R[15].start: 0xae000000, sz: 0x10000000 map: 1 name: ccci
+[8589] mblock-create-debug-R[16].start: 0x72000000, sz: 0x170000 map: 1 name: md_smem_ncache
+[8589] mblock-create-debug-R[17].start: 0x78000000, sz: 0x1600000 map: 0 name: ccci
+[8589] mblock_sanity_check:PASS
+[8590] mblock_reserved_append: add_subnode name=mblock-1-dramc-rk0 start:0x9ffff000 size:0x1000
+[8591] mblock-reserved-memory is appended (0x9ffff000, 0x1000)
+[8591] mblock_reserved_append: add_subnode name=mblock-2-dramc-rk1 start:0xfffff000 size:0x1000
+[8593] mblock-reserved-memory is appended (0xfffff000, 0x1000)
+[8593] mblock_reserved_append: add_subnode name=mblock-3-log_store start:0x7ffc0000 size:0x40000
+[8594] mblock-reserved-memory is appended (0x7ffc0000, 0x40000)
+[8594] mblock_reserved_append: add_subnode name=mblock-4-atf-reserved start:0x47d80000 size:0x50000
+[8596] mblock-reserved-memory is appended (0x47d80000, 0x50000)
+[8596] mblock_reserved_append: add_subnode name=mblock-5-atf-log-reserved start:0xbffc0000 size:0x40000
+[8597] mblock-reserved-memory is appended (0xbffc0000, 0x40000)
+[8597] mblock_reserved_append: add_subnode name=mblock-6-SSPM-reserved start:0x7ff00000 size:0xc0000
+[8599] mblock-reserved-memory is appended (0x7ff00000, 0xc0000)
+[8599] mblock_reserved_append: add_subnode name=mblock-7-tee-reserved start:0x7cd00000 size:0x3200000
+[8601] mblock-reserved-memory is appended (0x7cd00000, 0x3200000)
+[8601] mblock_reserved_append: add_subnode name=mblock-8-ram_console start:0x47c80000 size:0x10000
+[8602] mblock-reserved-memory is appended (0x47c80000, 0x10000)
+[8602] mblock_reserved_append: add_subnode name=mblock-9-pstore start:0x47c90000 size:0xe0000
+[8604] mblock-reserved-memory is appended (0x47c90000, 0xe0000)
+[8604] mblock_reserved_append: add_subnode name=mblock-10-minirdump start:0x47d70000 size:0x10000
+[8605] mblock-reserved-memory is appended (0x47d70000, 0x10000)
+[8606] mblock_reserved_append: add_subnode name=mblock-11-framebuffer start:0x7b870000 size:0x1490000
+[8607] mblock-reserved-memory is appended (0x7b870000, 0x1490000)
+[8607] mblock_reserved_append: add_subnode name=mblock-12-atf-ramdump-memory start:0xbff40000 size:0x80000
+[8609] mblock-reserved-memory is appended (0xbff40000, 0x80000)
+[8609] mblock_reserved_append: add_subnode name=mblock-13-SPM-reserved start:0x77ff0000 size:0x10000
+[8610] mblock-reserved-memory is appended (0x77ff0000, 0x10000)
+[8611] mblock_reserved_append: add_subnode name=mblock-14-SCP-reserved start:0x9fc00000 size:0x300000
+[8612] mblock-reserved-memory is appended (0x9fc00000, 0x300000)
+[8612] mblock_reserved_append: add_subnode name=mblock-15-ccci_tag_mem start:0x9ffef000 size:0x10000
+[8613] mblock-reserved-memory is appended (0x9ffef000, 0x10000)
+[8613] mblock_reserved_append: add_subnode name=mblock-16-ccci start:0xae000000 size:0x10000000
+[8615] mblock-reserved-memory is appended (0xae000000, 0x10000000)
+[8615] mblock_reserved_append: add_subnode name=mblock-17-md_smem_ncache start:0x72000000 size:0x170000
+[8616] mblock-reserved-memory is appended (0x72000000, 0x170000)
+[8616] mblock_reserved_append: add_subnode name=mblock-18-ccci start:0x78000000 size:0x1600000
+[8617] mblock-reserved-memory is appended (0x78000000, 0x1600000)
+[8621] booting linux @ 0x40080000, ramdisk @ 0x51b00000 (980249)
