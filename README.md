@@ -234,4 +234,4 @@ The materials:
 	(7) 9.931608 -> 9.931654: Fingerprint manager loaded()
 	
 # Project progress #
- - 53% (tracing tlApi calls).
+ - 13% (tracing tlApi calls).
