@@ -99,7 +99,9 @@ The materials:
 	Gotcha!
 	<img width="1919" height="184" alt="image" src="https://github.com/user-attachments/assets/3ecac2e6-a268-4491-a54a-2febebc0ec72" />
 
-	We predicted that the keybox ciphertext should be here. How to decrypt it into private keys? It is not easy. Despite the buggy SoC, the wrapping algorithm is not.
+ It is the attestation data we are aiming to get, I will post the evidence in a later commit.
+
+	We predicted that the keybox ciphertext should be here. How to decrypt it into private keys? It is not easy. Despite the buggy SoC, the secure object wrapping algorithm won't let the ciphertext decrypted easily.
 
 	Digging further, suspicious data has appeared:
 
@@ -109,10 +111,10 @@ The materials:
 
        0706000000000000000000000000004d.tlbin
 
-	Some Trusted binaries:
+	Compare with some trusted binaries:
 	<img width="597" height="790" alt="image" src="https://github.com/user-attachments/assets/0446dc96-d1cf-4ef5-8b0a-65433ce6bf32" />
 
-	The hypothesis: At this point, we can guess why the trustlet UID was attached to the encrypted blob. Because the normal characteristic of an encrypted blob is extremely high entropy, the magic word **KEYMASTERATTESTDATA** and several bytes next to it is the header, the attached UUID is for usage privileges. As the UID is not matched, TEE won't allow it to read from RPMB. So the next move is to disassemble that suspicious Trustlet Binary(.tlbin).
+	The hypothesis: At this point, we can guess why the trustlet UID was attached to the encrypted blob. Because the normal characteristics of an encrypted blob is extremely high entropy, the magic word **KEYMASTERATTESTDATA** and several bytes next to it is the header, the attached UUID is for usage privileges. As the UID is not matched, TEE won't allow it to read from RPMB. So the next move is to disassemble that suspicious Trustlet Binary(.tlbin).
   - # Exploration of Trustlet #
      We defined that 0706000000000000000000000000004d.tlbin is the target file for disassemble, right now, we will disassemble it.
 
