@@ -100,11 +100,14 @@ The materials:
 	<img width="1919" height="184" alt="image" src="https://github.com/user-attachments/assets/3ecac2e6-a268-4491-a54a-2febebc0ec72" />
 
  It is the attestation data we are aiming to get, I will post the evidence in a later commit.
-	We predicted that the keybox ciphertext should be here. How to decrypt it into private keys? It is not easy. Despite the buggy SoC, the secure object wrapping algorithm won't let the ciphertext decrypted easily.
+	
+ We predicted that the keybox ciphertext should be here. How to decrypt it into private keys? It is not easy. Despite the buggy SoC, the secure object wrapping algorithm won't let the ciphertext decrypted easily.
 
 	Digging further, a suspicious data has appeared:
 
+
        07 06 00 00 00 00 00 00 00 00 00 00 00 00 00 4D
+
 
 	The data started from 0x1402C, and it matched exactly with:
 
@@ -131,7 +134,7 @@ The materials:
         +---------------------------------------------------------------+
 		| Offset | Bytes        | Data Definition   | Value             |
 		+---------------------------------------------------------------+
-		| 0x0	 | 4D 3C 4C 46  | Magic word		| "MCLF"			|
+		| 0x0	 | 4D 43 4C 46  | Magic word		| "MCLF"			|
 		| 0x04	 | 05 00 02 00  | Version(Min/Maj)	| v2.5				|
 		| 0x08   | 08 00 00 00  | Flags				| 0x8				|
 		| 0x0C	 | 02 00 00 00 	| memType			| 2					|
