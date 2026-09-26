@@ -8,7 +8,7 @@ The materials:
 - Oppo A15 (identified as CPH2185, based on MT6765 SoC) (dismantled state)
 - mtkclient (https://github.com/bkerler/mtkclient)
 - Ghidra (for disassembly)
-- A human brain (research dispatcher and auditor)
+- A human brain (me)
 
 # Research Initialization #
 
@@ -21,7 +21,7 @@ The materials:
 	+ Leaked Kinibi SDK from qcom-leaked-source, which contains the 2013 Trustonic Kinibi SDK.
 - Known platform bugs and exploits:
 	+ Kamakiri2 (working greatly).
-	+ TOCTOU (LK patching-on-the-fly).
+	+ TOCTOU (LK patching-on-the-fly, idk but it may work with more efforts).
 	+ Unstripped TEEOS image (contains plenty of readable strings).
 	+ Identical function pointer table
 
@@ -100,10 +100,9 @@ The materials:
 	<img width="1919" height="184" alt="image" src="https://github.com/user-attachments/assets/3ecac2e6-a268-4491-a54a-2febebc0ec72" />
 
  It is the attestation data we are aiming to get, I will post the evidence in a later commit.
-
 	We predicted that the keybox ciphertext should be here. How to decrypt it into private keys? It is not easy. Despite the buggy SoC, the secure object wrapping algorithm won't let the ciphertext decrypted easily.
 
-	Digging further, suspicious data has appeared:
+	Digging further, a suspicious data has appeared:
 
        07 06 00 00 00 00 00 00 00 00 00 00 00 00 00 4D
 
@@ -114,18 +113,18 @@ The materials:
 	Compare with some trusted binaries:
 	<img width="597" height="790" alt="image" src="https://github.com/user-attachments/assets/0446dc96-d1cf-4ef5-8b0a-65433ce6bf32" />
 
-	The hypothesis: At this point, we can guess why the trustlet UID was attached to the encrypted blob. Because the normal characteristics of an encrypted blob is extremely high entropy, the magic word **KEYMASTERATTESTDATA** and several bytes next to it is the header, the attached UUID is for usage privileges. As the UID is not matched, TEE won't allow it to read from RPMB. So the next move is to disassemble that suspicious Trustlet Binary(.tlbin).
-  - # Exploration of Trustlet #
-     We defined that 0706000000000000000000000000004d.tlbin is the target file for disassemble, right now, we will disassemble it.
+	The hypothesis: At this point, we can guess why the trustlet UUID was embedded to the encrypted blob. Because the normal characteristics of an encrypted blob is extremely high entropy, the magic word **KEYMASTERATTESTDATA** and several bytes next to it is the header, the embedded UUID is for a security reason. As the UUID is not matched, TEE won't allow it to read from RPMB. So the next move is to disassemble that suspicious Trustlet Binary(.tlbin).
+  - # The exploration of that trustlet #
+     We defined that 0706000000000000000000000000004d.tlbin is the target file to disassemble, right now, we will disassemble it.
 
-	 A valuable resource we have is the MCLF loader, which map the memory for easier analysis: https://github.com/ghassani/mclf-ida-loader/blob/master/mclf_loader.py
+	 A valuable resource we have is the MCLF loader, which is a tool to create a memory map for easier analysis: https://github.com/ghassani/mclf-ida-loader/blob/master/mclf_loader.py
 
 	 This image contain the header of the targeted trustlet:
 	 <img width="1440" height="143" alt="image" src="https://github.com/user-attachments/assets/42b0412d-d333-4e81-89ce-2359e1937310" />
 
         4D 43 4C 46 05 00 02 00 08 00 00 00 02 00 00 00 03 00 00 00 10 00 00 00 07 06 00 00 00 00 00 00 00 00 00 00 00 00 00 4D 00 00 00 00 01 00 00 00 00 10 00 00 3A E4 01 00 00 10 02 00 98 05 00 00 F8 AA 01 00 21 B7 01 00 00
 
-     This header data is enough for memory map.
+     This header data is enough for a memory map.
 
 	 Extracted memory map from the header:
 	 
@@ -165,7 +164,7 @@ The materials:
 	<img width="1915" height="983" alt="image" src="https://github.com/user-attachments/assets/54557af4-3e1c-4c53-ade2-4fab5d92bd62" />
 	<img width="1904" height="982" alt="image" src="https://github.com/user-attachments/assets/4893bf55-9850-4d7a-8349-62339a9f836c" />
 
-	It is evident that the trustlet binary wasn't treated well before going to production, leaving it unstripped. From the string view, we can assume that this trustlet definitely carries the provision process(factory) and parses the attestation data.
+	It is evident that the trustlet binary wasn't treated well before going to production, unlike QTEE and TEEGRIS, the binaries remain unstripped. From the string view, we can assume that this trustlet definitely carries the provision process(factory) and parses the attestation data.
 
 	At this stage, the analysis process becomes harsher as it requires various logic tracing and disassembling the boot stages more deeply. Because of unstripped images, the logic tracing process will be easier.
 
